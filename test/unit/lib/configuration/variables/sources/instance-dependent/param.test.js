@@ -146,7 +146,7 @@ describe('test/unit/lib/configuration/variables/sources/instance-dependent/param
   it('should report with an error when the address is not supported', async () => {
     const { variablesMeta } = await runServerless();
     expect(variablesMeta.get('custom\0unsupportedAddress').error.code).to.equal(
-      'VARIABLE_RESOLUTION_ERROR'
+      'MISSING_VARIABLE_RESULT'
     );
   });
 
